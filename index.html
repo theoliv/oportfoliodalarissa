@@ -1,1 +1,84 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Rouge+Script&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #faf9f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+        }
+
+        /* Caixa de Bem-Vindo */
+        .welcome-box {
+            background-color: #fff; /* Fundo branco */
+            border: 2px solid #000; /* Borda preta fina */
+            padding: 8px 20px; /* Espaçamento interno reduzido */
+            margin-bottom: -15px; /* Margem inferior */
+            border-radius: 0; /* Bordas sem arredondamento */
+            display: inline-block;
+        }
+
+        /* Estilo do texto de Bem-Vindo */
+        .welcome-text {
+            font-size: 1.5rem; /* Reduzido para 50% do tamanho anterior */
+            font-weight: 500;
+            color: #000;
+        }
+
+        /* Título Principal */
+        .title {
+            font-size: 9rem;
+            font-weight: 650;
+            color: #000;
+            margin-bottom: 20px; /* Ajuste para espaço abaixo do título */
+        }
+
+        /* Estilo para a letra "P" */
+        .title .script-font {
+            font-family: 'Rouge Script', cursive;
+            font-size: calc(9rem + 50px); /* Tamanho do "P" */
+            display: inline-block;
+        }
+
+        /* Link estilo */
+        .portfolio-link {
+            text-decoration: none; /* Remove o sublinhado */
+            color: #000; /* Cor do texto */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Caixa de Bem-Vindo -->
+    <div class="welcome-box">
+        <p class="welcome-text">bem-vindo ao meu</p>
+    </div>
+
+    <!-- Título Principal com link -->
+    <h1 class="title">
+        <a href="portfolio.html" class="portfolio-link">
+            <span class="script-font">P</span>ortfolio.
+        </a>
+    </h1>
+
+    <!-- Descrição -->
+    <p class="description"></p>
+
+</body>
+</html>
