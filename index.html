@@ -1,84 +1,151 @@
-<!DOCTYPE html> 
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Rouge+Script&display=swap" rel="stylesheet">
+    <title>Portfólio - Larissa Oliveira</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Birds+of+Paradise&display=swap" rel="stylesheet">
     <style>
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
+        /* Fonte */
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: #faf9f5;
-            color: #333;
+            background-color: #faf9f5; /* Cor de fundo do site */
+            color: #000000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Introdução */
+        .intro {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .intro h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+        }
+
+        .intro .description {
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 20px auto;
+            font-weight: 400;
+        }
+
+        /* Balões */
+        .balloons {
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-            text-align: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin: 40px 0;
         }
 
-        /* Caixa de Bem-Vindo */
-        .welcome-box {
-            background-color: #fff; /* Fundo branco */
-            border: 2px solid #000; /* Borda preta fina */
-            padding: 8px 20px; /* Espaçamento interno reduzido */
-            margin-bottom: -15px; /* Margem inferior */
-            border-radius: 0; /* Bordas sem arredondamento */
-            display: inline-block;
-        }
-
-        /* Estilo do texto de Bem-Vindo */
-        .welcome-text {
-            font-size: 1.5rem; /* Reduzido para 50% do tamanho anterior */
+        .balloon {
+            background-color: #faf9f5;
+            border: 2px solid;
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 1.2rem;
             font-weight: 500;
-            color: #000;
+            text-align: center;
+            width: 240px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        /* Título Principal */
-        .title {
-            font-size: 9rem;
-            font-weight: 650;
-            color: #000;
-            margin-bottom: 20px; /* Ajuste para espaço abaixo do título */
+        .balloon:hover, .balloon.active {
+            background-color: #000; /* Cor preta ao passar ou clicar */
+            color: #fff; /* Texto em branco */
+            transform: translateY(-5px);
         }
 
-        /* Estilo para a letra "P" */
-        .title .script-font {
-            font-family: 'Rouge Script', cursive;
-            font-size: calc(9rem + 50px); /* Tamanho do "P" */
-            display: inline-block;
+        /* Experiência e Educação */
+        .experience-education {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
         }
 
-        /* Link estilo */
-        .portfolio-link {
-            text-decoration: none; /* Remove o sublinhado */
-            color: #000; /* Cor do texto */
+        .experience, .education {
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .experience h2, .education h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500; /* Alterado para Montserrat Medium */
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .experience p, .education p {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        /* Responsividade */
+        @media (min-width: 768px) {
+            .experience-education {
+                flex-wrap: nowrap;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Seção de Apresentação -->
+        <section class="intro">
+            <h1><span class="cursive">Larissa</span> Oliveira</h1>
+            <p class="description">
+                Prazer! Tenho 22 anos, sou da capital de São Paulo, estudante de design na FMU e desde pequena apaixonada por arte e criação.<br><br>
+                Estou empenhada em desenvolver minha carreira na área de Design, com especialização em mídias sociais e criação de arte e interesses em comunicação, tecnologia, moda e fotografia.
+            </p>
+        </section>
 
-    <!-- Caixa de Bem-Vindo -->
-    <div class="welcome-box">
-        <p class="welcome-text">bem-vindo ao meu</p>
+        <!-- Seção de Balões -->
+        <section class="balloons">
+            <div class="balloon" onclick="toggleBalloon(this)">sobre mim</div>
+            <div class="balloon" onclick="toggleBalloon(this)">peças gráficas</div>
+            <div class="balloon" onclick="toggleBalloon(this)">criação de produtos</div>
+            <div class="balloon" onclick="toggleBalloon(this)">contato</div>
+        </section>
+
+        <!-- Seção de Experiência e Educação -->
+        <section class="experience-education">
+            <div class="experience">
+                <h2>Experiência</h2>
+                <p><strong>Sublima | Designer</strong><br>Criação de arte para materiais impressos e gráficos, operação de equipamentos de impressão, design de produtos e desenvolvimento de peças para sites.</p>
+                <p><strong>Icomm Group | Designer Gráfico</strong><br>Desenvolvimento de peças de comunicação para site, newsletter, mídias sociais e apoio de equipe de criação e edição de fotos para campanhas e vídeos simples para mídias sociais (IGTV, Reels e Stories). Criação de peças para performance e mídia paga.</p>
+            </div>
+            <div class="education">
+                <h2>Educação</h2>
+                <p><strong>Graduação</strong><br>Bacharelado em Design | FMU, previsão para agosto de 2026</p>
+                <p><strong>Idiomas</strong><br>Inglês - intermediário</p>
+            </div>
+        </section>
     </div>
 
-    <!-- Título Principal com link -->
-    <h1 class="title">
-        <a href="portfolio.html" class="portfolio-link">
-            <span class="script-font">P</span>ortfolio.
-        </a>
-    </h1>
-
-    <!-- Descrição -->
-    <p class="description"></p>
-
+    <script>
+        function toggleBalloon(balloon) {
+            balloon.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
