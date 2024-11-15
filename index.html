@@ -31,12 +31,13 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 180px;
+            margin-bottom: 60px;
         }
 
         /* Introdução */
         .intro {
-            padding: 20px;
+            padding: 30px;
             max-width: 600px;
             flex: 1;
             text-align: left;
@@ -115,8 +116,8 @@
 
         .experience h2, .education h2 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 500;
-            font-size: 1.5rem;
+            font-weight: 700; /* Alterado para negrito */
+            font-size: 2rem;
             margin-bottom: 15px;
         }
 
@@ -171,6 +172,124 @@
             height: 100%;
             object-fit: cover;
         }
+        
+        
+        /* Estilo para a linha de cards quadrados */
+.square-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    }
+
+.square-card {
+    width: 360px;
+    height: 360px;
+    border: 2px solid;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+
+.square-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilo para card retângulo horizontal */
+.gallery-item-horizontal {
+    width: 800px;  /* Ajuste o tamanho conforme necessário */
+    height: 500px; /* Tamanho fixo para o card */
+    border: 2px solid;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item-horizontal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Balões redes sociais */ 
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #faf9f5;
+  padding: 15px 10px;
+  border-radius: 5em;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  box-shadow: 0px 0px 4px #00000027;
+  transition: 0.3s;
+}
+
+.social-button:hover {
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 6px 3px #00000027;
+}
+
+.social-buttons svg {
+  transition: 0.3s;
+  height: 20px;
+}
+
+
+
+.github {
+  background-color: #333;
+}
+
+.github svg {
+  width: 25px;
+  height: 25px;
+  fill: #f2f2f2;
+}
+
+.github:hover svg {
+  fill: #333;
+}
+
+.linkedin {
+  background-color: #0077b5;
+}
+
+.linkedin svg {
+  fill: #f2f2f2;
+}
+
+.linkedin:hover svg {
+  fill: #0077b5;
+}
+
+.instagram {
+  background-color: #c13584;
+}
+
+.instagram svg {
+  fill: #f2f2f2;
+}
+
+.instagram:hover svg {
+  fill: #c13584;
+}
+
+
+
 
         /* Responsividade */
         @media (min-width: 768px) {
@@ -182,8 +301,6 @@
                 justify-content: center;
             }
         }
-
-        /* Modificação para a segunda galeria */
         .second-gallery-container {
             display: flex;
             justify-content: flex-end;
@@ -196,25 +313,43 @@
 </head>
 <body>
     <div class="container">
+    
+    
+    
+    
+    
+     <!-- Seção de Balões -->
+        <section class="balloons">
+            <div class="balloon" onclick="toggleBalloon(this)">sobre mim</div>
+        </section>
+        
+        
+        
+        
+        
         <!-- Seção de Apresentação e Card -->
         <section class="intro-container">
             <div class="intro">
-                <h1><span class="cursive">Larissa</span> Oliveira</h1>
+                <h1><span style="font-family: 'Arial', sans-serif;">L</span>arissa Oliveira</h1>
                 <p class="description">
                     Prazer! Tenho 22 anos, sou da capital de São Paulo, estudante de design na FMU e desde pequena apaixonada por arte e criação.<br><br>
                     Estou empenhada em desenvolver minha carreira na área de Design, com especialização em mídias sociais e criação de arte e interesses em comunicação, tecnologia, moda e fotografia.
                 </p>
             </div>
-            <!-- Card com Imagem -->
-            <div class="card">
-                <img src="https://i.pinimg.com/736x/24/59/f6/2459f67cdf0b7911fcb6f5f3fbddd105.jpg" alt="Imagem do Card">
-            </div>
+            
+            
+            
+            
+            
+            <!-- Card com GIF local -->
+<div class="card">
+    <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDYwcjVneHN5NXllYXRoNTBnN2c3OHdzZGVmZ3U1M2NpYXV3Mmh2aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SPrASn3WNsZpkHAZG2/giphy-downsized-large.gif" alt="Gif animado do Card">
+</div>
+
         </section>
 
-        <!-- Seção de Balões -->
-        <section class="balloons">
-            <div class="balloon" onclick="toggleBalloon(this)">sobre mim</div>
-        </section>
+
+
 
         <!-- Seção de Experiência e Educação -->
         <section class="experience-education">
@@ -229,11 +364,19 @@
                 <p><strong>Idiomas</strong><br>Inglês - intermediário</p>
             </div>
         </section>
-
-        <!-- Novo balão "peças gráficas" abaixo da Experiência e Educação -->
+        
+        
+        
+        
+        
+          <!-- Seção de Balões -->
         <section class="balloons">
-            <div class="balloon" onclick="toggleBalloon(this)">peças gráficas</div>
+            <div class="balloon" onclick="toggleBalloon(this)"> peças graficas</div>
         </section>
+        
+        
+        
+        
 
         <!-- Seção de Galeria de Imagens de criação grafica 1 -->
         <section class="image-gallery">
@@ -253,14 +396,21 @@
                 </div>
             </div>
 
+
+
+
+
             <!-- Retângulo na parte direita -->
             <div class="gallery-item">
                 <img src="https://i.pinimg.com/736x/76/46/07/764607e069c5e6c8ab1ca6d8ea4d01f5.jpg" alt="Retângulo">
             </div>
         </section>
-    </div>
-    
-        <!-- Seção de Galeria de Imagens de criação grafica 2 -->
+        
+        
+        
+        
+      
+                <!-- Seção de Galeria de Imagens de criação grafica 2 -->
         <section class="image-gallery">
             <div class="gallery-item">
                 <img src="https://i.pinimg.com/736x/6e/0c/11/6e0c110c4c6330b32ac42f8fbef9b726.jpg" alt="Imagem da galeria">
@@ -281,48 +431,95 @@
                 </div>
             </div>
         </section>
+        
+        
+        
+          <!-- Seção de Balões -->
+        <section class="balloons">
+            <div class="balloon" onclick="toggleBalloon(this)"> criação de produtos</div>
+        </section>
+        
+        
+        
+        
+        <!-- Seção de Galeria de Imagens de Criação de Produtos -->
+<section class="image-gallery">
+    <!-- Primeira Linha com um card retângulo horizontal -->
+    <div class="gallery-item-horizontal">
+        <img src="https://i.pinimg.com/736x/76/46/07/764607e069c5e6c8ab1ca6d8ea4d01f5.jpg" alt="Card Retângulo Horizontal">
     </div>
 
-    <script>
-  
-        function toggleBalloon(element) {
-            element.classList.toggle('active');
-        }
-    </script>
-    
-            <!-- Seção de Balões -->
-        <section class="balloons">
-            <div class="balloon" onclick="toggleBalloon(this)">criação de produtos</div>
-        </section>
-    
-           <!-- Seção de Galeria de Imagens de Criação de Produtos -->
-<section class="image-gallery">
-    <!-- Card de Imagem Retangular Grande -->
-    <div class="large-card">
-        <img src="https://i.pinimg.com/736x/52/2d/29/522d29574c7cea55e1824ccc1207e386.jpg" alt="Imagem da Criação de Produtos">
+    <!-- Segunda Linha com dois cards (um retângulo e um quadrado) -->
+    <div class="right-gallery">
+        <div class="gallery-frame">
+            <img src="https://i.pinimg.com/736x/04/48/70/0448702a51473f36d5da972f3de53c3c.jpg" alt="Card Retângulo">
+        </div>
+        <div class="square-card">
+            <img src="https://i.pinimg.com/736x/2d/3a/bb/2d3abb2ca5ba11219a7999b39efade1a.jpg" alt="Card Quadrado">
+        </div>
     </div>
 </section>
 
+
+         <!-- Seção de Balões -->
+        <section class="balloons">
+            <div class="balloon" onclick="toggleBalloon(this)"> contato </div>
+        </section>
+        
+
+        <section class="thank-you">
+    <p>Obrigada!</p>
+</section>
+
 <style>
-    /* Card de imagem retangular grande */
-    .large-card {
-        width: 100%;
-        max-width: 1200px;
-        height: 600px;
-        border: 2px solid;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        margin: 20px 0;
+    .thank-you {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 500;
+        color: #000;
+        background-color: #faf9f5;
     }
 
-    .large-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
 </style>
+
+
+
+         <!-- Seção de Redes Sociais -->
+
+<div class="social-buttons">
+  <a href="#" class="social-button github">
+    <svg class="cf-icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="-2.5 0 19 19"><path d="M9.464 17.178a4.506 4.506 0 0 1-2.013.317 4.29 4.29 0 0 1-2.007-.317.746.746 0 0 1-.277-.587c0-.22-.008-.798-.012-1.567-2.564.557-3.105-1.236-3.105-1.236a2.44 2.44 0 0 0-1.024-1.348c-.836-.572.063-.56.063-.56a1.937 1.937 0 0 1 1.412.95 1.962 1.962 0 0 0 2.682.765 1.971 1.971 0 0 1 .586-1.233c-2.046-.232-4.198-1.023-4.198-4.554a3.566 3.566 0 0 1 .948-2.474 3.313 3.313 0 0 1 .091-2.438s.773-.248 2.534.945a8.727 8.727 0 0 1 4.615 0c1.76-1.193 2.532-.945 2.532-.945a3.31 3.31 0 0 1 .092 2.438 3.562 3.562 0 0 1 .947 2.474c0 3.54-2.155 4.32-4.208 4.548a2.195 2.195 0 0 1 .625 1.706c0 1.232-.011 2.227-.011 2.529a.694.694 0 0 1-.272.587z"></path></svg>
+      </a>
+      <a href="#" class="social-button linkedin">
+        <svg viewBox="0 -2 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Icons" stroke="none" stroke-width="1">
+            <g transform="translate(-702.000000, -265.000000)">
+                <path d="M746,305 L736.2754,305 L736.2754,290.9384 C736.2754,287.257796 734.754233,284.74515 731.409219,284.74515 C728.850659,284.74515 727.427799,286.440738 726.765522,288.074854 C726.517168,288.661395 726.555974,289.478453 726.555974,290.295511 L726.555974,305 L716.921919,305 C716.921919,305 717.046096,280.091247 716.921919,277.827047 L726.555974,277.827047 L726.555974,282.091631 C727.125118,280.226996 730.203669,277.565794 735.116416,277.565794 C741.21143,277.565794 746,281.474355 746,289.890824 L746,305 L746,305 Z M707.17921,274.428187 L707.117121,274.428187 C704.0127,274.428187 702,272.350964 702,269.717936 C702,267.033681 704.072201,265 707.238711,265 C710.402634,265 712.348071,267.028559 712.41016,269.710252 C712.41016,272.34328 710.402634,274.428187 707.17921,274.428187 L707.17921,274.428187 L707.17921,274.428187 Z M703.109831,277.827047 L711.685795,277.827047 L711.685795,305 L703.109831,305 L703.109831,277.827047 L703.109831,277.827047 Z" id="LinkedIn">
+    </path>
+            </g>
+        </g>
     
+</svg>
+  </a>
+  <a href="#" class="social-button instagram">
+    <svg width="800px" height="800px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1">
+        <g id="Dribbble-Light-Preview" transform="translate(-340.000000, -7439.000000)">
+            <g id="icons" transform="translate(56.000000, 160.000000)">
+                <path d="M289.869652,7279.12273 C288.241769,7279.19618 286.830805,7279.5942 285.691486,7280.72871 C284.548187,7281.86918 284.155147,7283.28558 284.081514,7284.89653 C284.035742,7285.90201 283.768077,7293.49818 284.544207,7295.49028 C285.067597,7296.83422 286.098457,7297.86749 287.454694,7298.39256 C288.087538,7298.63872 288.809936,7298.80547 289.869652,7298.85411 C298.730467,7299.25511 302.015089,7299.03674 303.400182,7295.49028 C303.645956,7294.859 303.815113,7294.1374 303.86188,7293.08031 C304.26686,7284.19677 303.796207,7282.27117 302.251908,7280.72871 C301.027016,7279.50685 299.5862,7278.67508 289.869652,7279.12273 M289.951245,7297.06748 C288.981083,7297.0238 288.454707,7296.86201 288.103459,7296.72603 C287.219865,7296.3826 286.556174,7295.72155 286.214876,7294.84312 C285.623823,7293.32944 285.819846,7286.14023 285.872583,7284.97693 C285.924325,7283.83745 286.155174,7282.79624 286.959165,7281.99226 C287.954203,7280.99968 289.239792,7280.51332 297.993144,7280.90837 C299.135448,7280.95998 300.179243,7281.19026 300.985224,7281.99226 C301.980262,7282.98483 302.473801,7284.28014 302.071806,7292.99991 C302.028024,7293.96767 301.865833,7294.49274 301.729513,7294.84312 C300.829003,7297.15085 298.757333,7297.47145 289.951245,7297.06748 M298.089663,7283.68956 C298.089663,7284.34665 298.623998,7284.88065 299.283709,7284.88065 C299.943419,7284.88065 300.47875,7284.34665 300.47875,7283.68956 C300.47875,7283.03248 299.943419,7282.49847 299.283709,7282.49847 C298.623998,7282.49847 298.089663,7283.03248 298.089663,7283.68956 M288.862673,7288.98792 C288.862673,7291.80286 291.150266,7294.08479 293.972194,7294.08479 C296.794123,7294.08479 299.081716,7291.80286 299.081716,7288.98792 C299.081716,7286.17298 296.794123,7283.89205 293.972194,7283.89205 C291.150266,7283.89205 288.862673,7286.17298 288.862673,7288.98792 M290.655732,7288.98792 C290.655732,7287.16159 292.140329,7285.67967 293.972194,7285.67967 C295.80406,7285.67967 297.288657,7287.16159 297.288657,7288.98792 C297.288657,7290.81525 295.80406,7292.29716 293.972194,7292.29716 C292.140329,7292.29716 290.655732,7290.81525 290.655732,7288.98792" id="instagram-[#167]">
+
+</path>
+            </g>
+        </g>
+    </g>
+</svg>
+  </a>
+</div>
+
     <!-- Rodapé -->
 <footer style="background-color: #000; color: #fff; padding: 30px 0; text-align: center; font-size: 1rem;">
     <div class="container">
