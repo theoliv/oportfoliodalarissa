@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem e Descrição</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            max-width: 800px;
+            width: 90%;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            object-fit: cover;
+            border-right: 1px solid #ddd;
+        }
+
+        .description-container {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .description-container h1 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .description-container p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://via.placeholder.com/300" alt="Imagem exemplo">
+        </div>
+        <div class="description-container">
+            <h1>Título da Descrição</h1>
+            <p>
+                Esta é uma descrição relacionada à imagem mostrada ao lado. 
+                Você pode incluir informações detalhadas, histórias ou contexto 
+                sobre a imagem para torná-la mais interessante e informativa.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
