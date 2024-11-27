@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Imagem e Descrição</title>
     <style>
+        /* Reset básico */
         * {
             margin: 0;
             padding: 0;
@@ -12,64 +13,70 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'montserrat', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #f4f4f4;
+            background-color: #faf9f5;
             color: #333;
         }
 
         .container {
             display: flex;
-            max-width: 800px;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px; /* Espaço entre os cards */
+            max-width: 600px;
             width: 90%;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
         }
 
-        .image-container img {
+        .card {
+            background: #faf9f5;
+            border: 2px solid #000;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .image-card img {
             width: 100%;
             height: auto;
-            max-width: 300px;
             object-fit: cover;
-            border-right: 1px solid #ddd;
         }
 
-        .description-container {
+        .description-card {
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
         }
 
-        .description-container h1 {
+        .description-card h1 {
             font-size: 1.8rem;
             margin-bottom: 10px;
+            color: #222;
+            text-align: center;
         }
 
-        .description-container p {
+        .description-card p {
             font-size: 1rem;
-            line-height: 1.5;
+            line-height: 1.6;
+            color: #555;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="image-container">
-            <img src="https://via.placeholder.com/300" alt="Imagem exemplo">
+        <!-- Card de Imagem -->
+        <div class="card image-card">
+            <img src="https://i.pinimg.com/736x/8d/1a/e0/8d1ae0a82a2ecf0b08300d96eb904b8d.jpg" alt="Imagem Exemplo">
         </div>
-        <div class="description-container">
-            <h1>Título da Descrição</h1>
+
+        <!-- Card de Descrição -->
+        <div class="card description-card">
+            <h1>All pigs go to heaven</h1>
             <p>
-                Esta é uma descrição relacionada à imagem mostrada ao lado. 
-                Você pode incluir informações detalhadas, histórias ou contexto 
-                sobre a imagem para torná-la mais interessante e informativa.
+                Criação feita através de edição e recortes fotográficos.
             </p>
         </div>
     </div>
