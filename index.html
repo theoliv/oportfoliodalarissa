@@ -189,7 +189,6 @@
         }
     </style>
 </head>
-</head>
 <body>
     <div class="container">
     
@@ -214,7 +213,8 @@
         <!-- Seção de Apresentação e Card -->
         <section class="intro-container">
             <div class="intro">
-                <h1><span style="font-family: 'Arial', sans-serif;">L</span>arissa Oliveira</h1>
+                <h1><span style="font-family: 'Imperial Script', cursive; font-size: 6rem;">L</span>arissa Oliveira</h1>
+
                 <p class="description">
                     Prazer! Tenho 22 anos, sou da capital de São Paulo, estudante de design na FMU e desde pequena apaixonada por arte e criação.<br><br>
                     Estou empenhada em desenvolver minha carreira na área de Design, com especialização em mídias sociais e criação de arte e interesses em comunicação, tecnologia, moda e fotografia.
@@ -260,7 +260,7 @@
         <!-- Galeria de Imagens 1 -->
         <section class="image-gallery">
             <!-- Card Retangular na Esquerda -->
-          <a href="peça grafica 1.html" class="gallery-item-horizontal">
+            <div class="gallery-item-horizontal">
                 <img src="https://i.pinimg.com/736x/8d/1a/e0/8d1ae0a82a2ecf0b08300d96eb904b8d.jpg" alt="Retângulo">
             </div>
 
@@ -393,14 +393,54 @@
 <!-- Link para a fonte Imperial Script -->
 <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
 
-    <!-- Rodapé -->
-<footer style="background-color: #000; color: #fff; padding: 30px 0; text-align: center; font-size: 1rem;">
-    <div class="container">
+ <footer style="background-color: #000; color: #fff; padding: 25px 0; text-align: center; font-size: 1rem; margin-top: 50px;">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <p>&copy; 2024 Larissa Oliveira. Todos os direitos reservados.</p>
-
-        </div>
         <p>Feito com ❤ por Larissa Oliveira</p>
     </div>
+</footer>
+
+<style>
+    footer {
+        background-color: #000;
+        color: #fff;
+        padding: 25px 0;
+        text-align: center;
+        font-size: 1rem;
+        margin-top: 50px; 
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    footer p {
+        margin: 10px 0;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        footer {
+            padding: 20px 0;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        footer {
+            padding: 15px 0;
+        }
+
+        footer p {
+            font-size: 0.8rem;
+        }
+    }
+</style>
     
 </body>
 </html>
