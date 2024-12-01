@@ -139,7 +139,7 @@
         .gallery-item-horizontal {
             width: 100%;
             height: 100%;
-            border: 2px solid black; /* Mantém a borda preta no link */
+            border: 2px solid;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -159,8 +159,8 @@
 
         .gallery-frame {
             width: 100%;
-            aspect-ratio: 1 / 1; 
-            border: 2px solid black; 
+            aspect-ratio: 1 / 1; /* Mantém os cards quadrados */
+            border: 2px solid;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -189,6 +189,7 @@
         }
     </style>
 </head>
+</head>
 <body>
     <div class="container">
     
@@ -213,8 +214,7 @@
         <!-- Seção de Apresentação e Card -->
         <section class="intro-container">
             <div class="intro">
-                <h1><span style="font-family: 'Imperial Script', cursive; font-size: 6rem;">L</span>arissa Oliveira</h1>
-
+                <h1><span style="font-family: 'Arial', sans-serif;">L</span>arissa Oliveira</h1>
                 <p class="description">
                     Prazer! Tenho 22 anos, sou da capital de São Paulo, estudante de design na FMU e desde pequena apaixonada por arte e criação.<br><br>
                     Estou empenhada em desenvolver minha carreira na área de Design, com especialização em mídias sociais e criação de arte e interesses em comunicação, tecnologia, moda e fotografia.
@@ -257,35 +257,25 @@
             <div class="balloon" onclick="toggleBalloon(this)">peças graficas</div>
         </section>
 
-<section class="image-gallery">
-                  <!-- Card Retangular 1 -->
-    <a href="peça grafica 1.html" class="gallery-item-horizontal">
-        <img src="https://i.pinimg.com/736x/8d/1a/e0/8d1ae0a82a2ecf0b08300d96eb904b8d.jpg" alt="Retângulo">
-    </a>
+        <!-- Galeria de Imagens 1 -->
+        <section class="image-gallery">
+            <!-- Card Retangular na Esquerda -->
+            <div class="gallery-item-horizontal">
+                <img src="https://i.pinimg.com/736x/8d/1a/e0/8d1ae0a82a2ecf0b08300d96eb904b8d.jpg" alt="Retângulo">
+            </div>
 
-                  <!-- Quatro Cards Quadrados na Direita -->
-<div class="right-gallery">
-                  
-                  <!--  Card Quadrado 2 -->
-<a href="peça grafica 2.html" class="gallery-frame">
-       <img src="https://i.pinimg.com/736x/75/32/9a/75329a31acbb32c29b6f6392e8d370c2.jpg" alt="Quadro 1">
-        </a>
-        
-                   <!--  Card Quadrado 3 -->
-
-<a href="peça grafica 3.html" class="gallery-frame">
-        <img src="https://i.pinimg.com/736x/ee/ec/ca/eeeccac0eab33c33c65d487d1db9dd21.jpg" alt="Quadro 2">
-    </div>
-</a>
-                   <!-- Card Quadrado 4 -->
-                
-<a href="peça grafica 4.html" class="gallery-frame">
+            <!-- Quatro Cards Quadrados na Direita -->
+            <div class="right-gallery">
+                <div class="gallery-frame">
+                    <img src="https://i.pinimg.com/736x/75/32/9a/75329a31acbb32c29b6f6392e8d370c2.jpg" alt="Quadro 1">
+                </div>
+                <div class="gallery-frame">
+                    <img src="https://i.pinimg.com/736x/ee/ec/ca/eeeccac0eab33c33c65d487d1db9dd21.jpg" alt="Quadro 2">
+                </div>
+                <div class="gallery-frame">
                     <img src="https://i.pinimg.com/736x/8d/32/a8/8d32a8c50cc4c380d8688d10c5ad302e.jpg" alt="Quadro 3">
                 </div>
-                
-                <!-- Card Quadrado 5 -->
-
-<a href="peça grafica 4.html" class="gallery-frame">
+                <div class="gallery-frame">
                     <img src="https://i.pinimg.com/736x/c7/5c/9d/c75c9d69a5fa65158817f8fefa8e3cff.jpg" alt="Quadro 4">
                 </div>
             </div>
@@ -403,54 +393,14 @@
 <!-- Link para a fonte Imperial Script -->
 <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
 
- <footer style="background-color: #000; color: #fff; padding: 25px 0; text-align: center; font-size: 1rem; margin-top: 50px;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <!-- Rodapé -->
+<footer style="background-color: #000; color: #fff; padding: 30px 0; text-align: center; font-size: 1rem;">
+    <div class="container">
         <p>&copy; 2024 Larissa Oliveira. Todos os direitos reservados.</p>
+
+        </div>
         <p>Feito com ❤ por Larissa Oliveira</p>
     </div>
-</footer>
-
-<style>
-    footer {
-        background-color: #000;
-        color: #fff;
-        padding: 25px 0;
-        text-align: center;
-        font-size: 1rem;
-        margin-top: 50px; 
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    footer p {
-        margin: 10px 0;
-    }
-
-    /* Responsividade */
-    @media (max-width: 768px) {
-        footer {
-            padding: 20px 0;
-        }
-
-        footer p {
-            font-size: 0.9rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        footer {
-            padding: 15px 0;
-        }
-
-        footer p {
-            font-size: 0.8rem;
-        }
-    }
-</style>
     
 </body>
 </html>
